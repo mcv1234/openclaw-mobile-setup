@@ -115,9 +115,16 @@ export NODE_OPTIONS="-r /root/hijack.js"
 # 编辑代理配置
 nano ~/.proxy.conf
 
-# 取消注释并修改端口
-export https_proxy=http://127.0.0.1:7890
-export http_proxy=http://127.0.0.1:7890
+# 取消注释并修改端口和手机 IP
+export https_proxy=http://192.168.1.111:7890
+export http_proxy=http://192.168.1.111:7890
+```
+
+> ⚠️ **重要：** 必须使用手机 IP（如 `192.168.1.111`），不能用 `127.0.0.1`！
+
+启动 OpenClaw 时使用专用脚本：
+```bash
+~/start-openclaw.sh gateway
 ```
 
 ### SSH 快捷启动
